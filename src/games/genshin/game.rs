@@ -56,8 +56,8 @@ pub fn run() -> anyhow::Result<()> {
     let config = Config::get()?;
 
     let game_executable = match config.launcher.edition {
-        genshin::GameEdition::Global => "GenshinImpact.bat",
-        genshin::GameEdition::China  => "YuanShen.exe"
+        genshin::GameEdition::Global => "run.bat",
+        genshin::GameEdition::China  => "run.exe"
     };
 
     let game_path = config.game.path.for_edition(config.launcher.edition);
@@ -123,7 +123,7 @@ pub fn run() -> anyhow::Result<()> {
         // If patch applying is disabled, then game_executable is either GenshinImpact.exe or YuanShen.exe
         // so we don't need to check it here
         if !game_path.join("fps_unlocker.bat").exists() {
-            std::fs::write(game_path.join("fps_unlocker.bat"), format!("start {game_executable} %*\n\nZ:\ncd \"{}\"\nstart unlocker.exe", unlocker.dir().to_string_lossy()))?;
+            std::fs::write(game_path.join("fps_unlocker.bat"), format!("start GenshinImpact.exe %*\n\nZ:\ncd \"{}\"\nstart unlocker.exe", unlocker.dir().to_string_lossy()))?;
         }
     }
 
