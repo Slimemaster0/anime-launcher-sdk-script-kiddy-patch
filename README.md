@@ -1,30 +1,30 @@
-# 🦀 Anime Launcher SDK
+# Script kiddy patch
 
-SDK based on [anime-game-core](https://github.com/an-anime-team/anime-game-core) with some basic instruments like launcher state system and configuration file manager, written in Rust
+# PLEASE DO NOT USE THIS FOR CHEATING!
 
-## Common features
+# DO NOT LINK THIS REPO OUTSIDE OF DM's
 
-| Description | Feature |
-| - | - |
-| Manage launcher state | `states` |
-| Manage launcher config | `config` |
-| Manage components (list wine/dxvk versions, etc) | `components` |
-| Run the game | `game` |
-| Use Discord RPC when the game is running | `discord-rpc` |
-| Run the game in `bwrap` sandbox | `sandbox` |
+This is a patch for a library used by [An anime game launcher](https://github.com/an-anime-team/an-anime-game-launcher) and [The Honkers railway launcher](https://github.com/an-anime-team/the-honkers-railway-launcher) that allows running a prelaunch script.
 
-## Anime Game specific features
+[Upstream](https://github.com/an-anime-team/anime-launcher-sdk)
 
-| Description | Feature |
-| - | - |
-| Emulate game environment to get additional in-game payment methods | `environment-emulation` |
-| Unlock in-game frame rendering limit | `fps-unlocker` |
+A patched version of the anime-launcher-sdk for running a pre-launch-script.
 
-## Supported games
+This is intended to be used with [GIMI](https://github.com/SilentNightSound/GI-Model-Importer) or [SRMI](https://github.com/SilentNightSound/SR-Model-Importer) however no special feature is available for these mods.
 
-| Name | Feature |
-| - | - |
-| [An Anime Game](https://github.com/an-anime-team/an-anime-game-launcher) | `gen-shin` (without dash) |
-| [Honkers Railway](https://github.com/an-anime-team/the-honkers-railway-launcher) | `star-rail` |
-| [Honkers](https://github.com/an-anime-team/honkers-launcher) | `hon-kai` (without dash) |
-| [Punishing: Gray Raven](https://github.com/an-anime-team/an-anime-borb-launcher) | `pgr` |
+## Installation Instructions
+1.  Clone the repository for the launcher that you want to patch
+    Fantasy anime game:   [https://github.com/an-anime-team/an-anime-game-launcher.git](https://github.com/an-anime-team/an-anime-game-launcher)
+    Honkers railway game: [https://github.com/an-anime-team/the-honkers-railway-launcher.git](https://github.com/an-anime-team/the-honkers-railway-launcher/)
+
+2.  Open the directory for the launcher and then open the files named ``Cargo.toml``
+3.  Find the fine that says ``[dependencies.anime-launcher-sdk]``
+4.  Below that line there should be one that says ``git = "https://github.com/an-anime-team/anime-launcher-sdk"``
+5.  Replace that line with: ``git = "https://github.com/Slimemaster0/anime-launcher-sdk-script-kiddy-patch"`` then save and exit the file
+6.  Run ``cargo build --release``
+Now there should be a patched binary in ``target/release``
+
+The script must be placed in ``(PATH/TO/GAME/FILES/(Name of game)/run.bat``
+The path is typically ``$HOME/.local/share/name-of-launcher``
+
+Note: if you have FPS unlocker for the fantasy anime game the script will be called: ``fps_unlocker.bat``
