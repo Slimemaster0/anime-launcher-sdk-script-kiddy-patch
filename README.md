@@ -29,5 +29,6 @@ The path is typically ``$HOME/.local/share/name-of-launcher``
 
 ## Note
 1. If you are use 3DMigoto then you will need to add a file called ``d3dcompiler_47.dll`` to the 3DMigoto directory
-2. If you have FPS unlocker for the fantasy anime game the script will be called: ``fps_unlocker.bat``
+2. If you use FPS unlocker for the fantasy anime game the script will be called: ``fps_unlocker.bat``
 3. This patch is not required for use 3DMigoto with AAGL, but is required for The Honkers Railway Launcher
+4. The file named "hsr.bat" is a refrence launch script use by my self for the honkers railway game
