@@ -114,7 +114,7 @@ pub fn run() -> anyhow::Result<()> {
         windows_command += " ";
     }
 
-    windows_command += &format!("'{}/jadeite.exe' 'Z:\\{}/StarRail.exe' -- ", folders.patch.to_string_lossy(), folders.game.to_string_lossy());
+    windows_command += &format!("'Z:\\{}/run.bat' -- ", folders.game.to_string_lossy());
 
     if config.game.wine.borderless {
         launch_args += "-screen-fullscreen 0 -popupwindow ";
