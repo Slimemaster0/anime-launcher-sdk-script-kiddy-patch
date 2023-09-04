@@ -27,4 +27,6 @@ Now there should be a patched binary in ``target/release``
 The script must be placed in ``(PATH/TO/GAME/FILES/(Name of game)/run.bat``
 The path is typically ``$HOME/.local/share/name-of-launcher``
 
-Note: if you have FPS unlocker for the fantasy anime game the script will be called: ``fps_unlocker.bat``
+## Note
+1. If you have FPS unlocker for the fantasy anime game the script will be called: ``fps_unlocker.bat``
+2. If you are use 3DMigoto then you will need to add a file called ``d3dcompiler_47.dll`` to the 3DMigoto directory
