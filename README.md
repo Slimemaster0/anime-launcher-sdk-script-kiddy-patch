@@ -6,7 +6,7 @@
 
 This is a patch for a library used by [An anime game launcher](https://github.com/an-anime-team/an-anime-game-launcher) and [The Honkers railway launcher](https://github.com/an-anime-team/the-honkers-railway-launcher) that allows running a prelaunch script.
 
-[Upstream](https://github.com/an-anime-team/anime-launcher-sdk)
+[Upstream library](https://github.com/an-anime-team/anime-launcher-sdk)
 
 A patched version of the anime-launcher-sdk for running a pre-launch-script.
 
